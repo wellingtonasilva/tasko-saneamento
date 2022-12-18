@@ -47,5 +47,17 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="br.com.wsilva.tasko.tasko.saneamento.features.home.HomeFragment"
-        android:label="HomeFragment" />
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_desconectarUsuarioSucessoFragment"
+            app:destination="@id/desconectarUsuarioSucessoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/desconectarUsuarioSucessoFragment"
+        android:name="br.com.wsilva.tasko.tasko.saneamento.features.autenticacao.desconectar.DesconectarUsuarioSucessoFragment"
+        android:label="DesconectarUsuarioSucessoFragment" >
+        <action
+            android:id="@+id/action_desconectarUsuarioSucessoFragment_to_usuarioLoginFragment"
+            app:destination="@id/usuarioLoginFragment" />
+    </fragment>
 </navigation>

@@ -22,10 +22,6 @@ class AutenticacaoViewModel : ViewModel() {
     val authException: LiveData<AuthException>
         get() = _authException
 
-    private val _authSignUpResult = MutableLiveData<AuthSignUpResult>()
-    val authSignUpResult: LiveData<AuthSignUpResult>
-        get() = _authSignUpResult
-
     fun checkAutenticacao() {
         viewModelScope.launch(Dispatchers.IO) {
             try {
