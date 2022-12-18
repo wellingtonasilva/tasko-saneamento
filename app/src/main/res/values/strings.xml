@@ -9,4 +9,6 @@
     <string name="app_esqueci_minha_senha">Esqueci minha senha</string>
     <string name="app_codigo_verificacao">Código de verificação</string>
     <string name="app_confirmar">Confirmar</string>
+    <string name="app_ok">OK</string>
+    <string name="app_signout_sucesso">Você vou desconectado da aplicação com sucesso.</string>
 </resources>
