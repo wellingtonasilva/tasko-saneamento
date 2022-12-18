@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-taskosaneamento-dev-152238-authRole",
+      "UnauthRoleArn": "arn:aws:iam::467517946447:role/amplify-taskosaneamento-dev-152238-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::467517946447:role/amplify-taskosaneamento-dev-152238-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-taskosaneamento-dev-152238-deployment",
+      "UnauthRoleName": "amplify-taskosaneamento-dev-152238-unauthRole",
+      "StackName": "amplify-taskosaneamento-dev-152238",
+      "StackId": "arn:aws:cloudformation:us-east-1:467517946447:stack/amplify-taskosaneamento-dev-152238/d0365440-7ee7-11ed-8be2-12320f1f8c3d",
+      "AmplifyAppId": "d34azwtewlly6q"
+    },
+    "categories": {
+      "auth": {
+        "taskosaneamentof0c7c50f": {}
+      }
+    }
+  }
+}

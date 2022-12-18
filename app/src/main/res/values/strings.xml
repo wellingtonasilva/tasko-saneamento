@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Tasko Saneamento</string>
+    <string name="app_saneamento">Saneamento</string>
+    <string name="app_tasko_2">TASKO</string>
+    <string name="app_email">E-mail</string>
+    <string name="app_senha">Senha</string>
+    <string name="app_login">Login</string>
+    <string name="app_registrar">Registrar</string>
+    <string name="app_esqueci_minha_senha">Esqueci minha senha</string>
+    <string name="app_codigo_verificacao">Código de verificação</string>
+    <string name="app_confirmar">Confirmar</string>
+</resources>

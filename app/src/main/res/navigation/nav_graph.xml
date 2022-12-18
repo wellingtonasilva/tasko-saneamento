@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav"
+    app:startDestination="@id/splashFragment">
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="br.com.wsilva.tasko.tasko.saneamento.features.splash.SplashFragment"
+        android:label="SplashFragment" >
+        <action
+            android:id="@+id/action_splashFragment_to_usuarioLoginFragment"
+            app:destination="@id/usuarioLoginFragment" />
+        <action
+            android:id="@+id/action_splashFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/usuarioLoginFragment"
+        android:name="br.com.wsilva.tasko.tasko.saneamento.features.autenticacao.login.UsuarioLoginFragment"
+        android:label="UsuarioLoginFragment" >
+        <action
+            android:id="@+id/action_usuarioLoginFragment_to_usuarioRegistrarFragment"
+            app:destination="@id/usuarioRegistrarFragment" />
+        <action
+            android:id="@+id/action_usuarioLoginFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/usuarioRegistrarFragment"
+        android:name="br.com.wsilva.tasko.tasko.saneamento.features.autenticacao.registro.UsuarioRegistrarFragment"
+        android:label="UsuarioRegistrarFragment" >
+        <action
+            android:id="@+id/action_usuarioRegistrarFragment_to_registroConfirmacaoFragment"
+            app:destination="@id/registroConfirmacaoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registroConfirmacaoFragment"
+        android:name="br.com.wsilva.tasko.tasko.saneamento.features.autenticacao.confirmacao.RegistroConfirmacaoFragment"
+        android:label="RegistroConfirmacaoFragment" >
+        <action
+            android:id="@+id/action_registroConfirmacaoFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <argument
+            android:name="usuario"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="br.com.wsilva.tasko.tasko.saneamento.features.home.HomeFragment"
+        android:label="HomeFragment" />
+</navigation>
