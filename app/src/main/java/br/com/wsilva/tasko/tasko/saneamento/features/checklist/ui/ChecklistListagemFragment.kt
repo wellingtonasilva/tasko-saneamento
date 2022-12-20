@@ -1,4 +1,4 @@
-package br.com.wsilva.tasko.tasko.saneamento.features.home
+package br.com.wsilva.tasko.tasko.saneamento.features.checklist.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,13 +7,14 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import br.com.wsilva.tasko.tasko.saneamento.R
 
-class HomeFragment : Fragment() {
+class ChecklistListagemFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        val view = inflater.inflate(R.layout.fragment_checklist_listagem, container, false)
+        return view
     }
 }
