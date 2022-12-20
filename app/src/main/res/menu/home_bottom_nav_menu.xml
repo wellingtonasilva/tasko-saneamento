@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/ordemServicoListagemFragment"
+        android:icon="@drawable/ic_baseline_home"
+        android:title="@string/app_home" />
+
+    <item
+        android:id="@+id/fotosListagemFragment"
+        android:icon="@drawable/ic_baseline_photo_album"
+        android:title="@string/app_fotos" />
+
+    <item
+        android:id="@+id/ocorrenciasListagemFragment"
+        android:icon="@drawable/ic_baseline_warning"
+        android:title="@string/app_ocorrencias" />
+
+    <item
+        android:id="@+id/checklistListagemFragment"
+        android:icon="@drawable/ic_baseline_checklist"
+        android:title="@string/app_checklist" />
+
+</menu>

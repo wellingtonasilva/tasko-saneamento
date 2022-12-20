@@ -1,4 +1,4 @@
-package br.com.wsilva.tasko.tasko.saneamento.features.ordemservico.presentation
+package br.com.wsilva.tasko.tasko.saneamento.features.ordemservico.ui
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

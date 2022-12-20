@@ -11,4 +11,10 @@
     <string name="app_confirmar">Confirmar</string>
     <string name="app_ok">OK</string>
     <string name="app_signout_sucesso">Você vou desconectado da aplicação com sucesso.</string>
+    <string name="app_home">Home</string>
+    <string name="app_fotos">Fotos</string>
+    <string name="app_ocorrencias">Ocorrências</string>
+    <string name="app_checklist">Checklist</string>
+    <string name="app_ordem_servico">Ordem de \nServiço</string>
+    <string name="app_tipo_servico">REATERRO DE VALA</string>
 </resources>
