@@ -1,7 +1,7 @@
 
 <resources>
     <style name="Theme.TaskoSaneamento" parent="Theme.Material3.Light.NoActionBar">
-        <item name="colorPrimary">@color/md_theme_light_primary</item>
+        <item name="colorPrimary">@color/md_theme_light_onPrimaryContainer</item>
         <item name="colorOnPrimary">@color/md_theme_light_onPrimary</item>
         <item name="colorPrimaryContainer">@color/md_theme_light_primaryContainer</item>
         <item name="colorOnPrimaryContainer">@color/md_theme_light_onPrimaryContainer</item>
@@ -50,12 +50,16 @@
     <style name="BasicTextViewTitulo" parent="Theme.TaskoSaneamento">
         <item name="fontFamily">@font/roboto_bold</item>
         <item name="android:textSize">40sp</item>
-        <item name="android:textColor">@color/md_theme_light_onTertiary</item>
+        <item name="android:textColor">@color/md_theme_light_onPrimary</item>
     </style>
 
     <style name="BasicTextViewTituloItemList" parent="Theme.TaskoSaneamento">
         <item name="fontFamily">@font/roboto_bold</item>
         <item name="android:textSize">14sp</item>
         <item name="android:textColor">@color/md_theme_light_onTertiary</item>
+    </style>
+
+    <style name="ShapeBorderedHomeItem" parent="Theme.TaskoSaneamento">
+        <item name="android:background">@drawable/shape_bordered_home_item</item>
     </style>
 </resources>

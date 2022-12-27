@@ -5,16 +5,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import br.com.wsilva.tasko.tasko.core.domain.model.os.OrdemServico
 import br.com.wsilva.tasko.tasko.saneamento.R
-import java.util.*
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class OrdemServicoListagemFragment : Fragment() {
 
-    private lateinit var recyclerView: RecyclerView
-    private lateinit var adapter: OrdemServicoListagemItemAdapter
+    lateinit var viewModel: OrdemServicoViewModel
+    lateinit var recyclerView: RecyclerView
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -23,45 +25,53 @@ class OrdemServicoListagemFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_ordem_servico_listagem, container, false)
 
+        viewModel = ViewModelProvider(this).get(OrdemServicoViewModel::class.java)
         recyclerView = view.findViewById(R.id.recyclerView)
-        adapter = OrdemServicoListagemItemAdapter(getList())
         recyclerView.layoutManager = LinearLayoutManager(recyclerView.context)
-        recyclerView.adapter = adapter
+
+        viewModel.ordemServico.observe(viewLifecycleOwner, Observer {
+            recyclerView.adapter = OrdemServicoListagemItemAdapter(it)
+        })
 
         return view
     }
 
-    private fun getList(): List<OrdemServico> {
-        return listOf(
-            OrdemServico(
-                id = UUID.randomUUID().toString(),
-                idOrdemServico = 1,
-                agenteExterno = "Agente Externo",
-                bairro = "Bairro",
-                dataCancelamento = "17/12/1977",
-                dataEncerramentoOS = "10/12/2022",
-                numeroOS = 1010
-            ),
-
-            OrdemServico(
-                id = UUID.randomUUID().toString(),
-                idOrdemServico = 1,
-                agenteExterno = "Agente Externo",
-                bairro = "Bairro",
-                dataCancelamento = "17/12/1977",
-                dataEncerramentoOS = "10/12/2022",
-                numeroOS = 1010
-            ),
-
-            OrdemServico(
-                id = UUID.randomUUID().toString(),
-                idOrdemServico = 1,
-                agenteExterno = "Agente Externo",
-                bairro = "Bairro",
-                dataCancelamento = "17/12/1977",
-                dataEncerramentoOS = "10/12/2022",
-                numeroOS = 1010
-            ),
-        )
+    override fun onResume() {
+        super.onResume()
+        viewModel.getAllOrdemServico()
     }
+//
+//    private fun getList(): List<OrdemServico> {
+//        return listOf(
+//            OrdemServico(
+//                id = UUID.randomUUID().toString(),
+//                idOrdemServico = 1,
+//                agenteExterno = "Agente Externo",
+//                bairro = "Bairro",
+//                dataCancelamento = "17/12/1977",
+//                dataEncerramentoOS = "10/12/2022",
+//                numeroOS = 1010
+//            ),
+//
+//            OrdemServico(
+//                id = UUID.randomUUID().toString(),
+//                idOrdemServico = 1,
+//                agenteExterno = "Agente Externo",
+//                bairro = "Bairro",
+//                dataCancelamento = "17/12/1977",
+//                dataEncerramentoOS = "10/12/2022",
+//                numeroOS = 1010
+//            ),
+//
+//            OrdemServico(
+//                id = UUID.randomUUID().toString(),
+//                idOrdemServico = 1,
+//                agenteExterno = "Agente Externo",
+//                bairro = "Bairro",
+//                dataCancelamento = "17/12/1977",
+//                dataEncerramentoOS = "10/12/2022",
+//                numeroOS = 1010
+//            ),
+//        )
+//    }
 }

@@ -22,10 +22,12 @@ object AppModule {
             application,
             AppDatabase::class.java,
             AppDatabase.DATABASE_NAME
-        ).build()
+        ).fallbackToDestructiveMigration()
+            .build()
     }
 
     @Provides
+    @Singleton
     fun provideApiService(): ApiService {
         return ApiServiceImpl.service
     }
