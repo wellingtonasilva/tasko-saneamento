@@ -7,7 +7,7 @@ import br.com.wsilva.tasko.tasko.saneamento.features.ordemservico.data.entity.Or
 
 @Database(
     entities = [OrdemServicoEntity::class],
-    version = 1
+    version = 3
 )
 abstract class AppDatabase : RoomDatabase() {
 

@@ -9,12 +9,14 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import javax.inject.Singleton
 
-@Module
+@Module(includes = [RepositoryModule::class])
 @InstallIn(SingletonComponent::class)
 object UseCasesModule {
 
     @Provides
+    @Singleton
     fun provideOrdemServicoUseCases(repository: OrdemServicoRepository): OrdemServicoUseCases {
         return OrdemServicoUseCases(
             addOrdemServicoUseCase = AddOrdemServicoUseCase(repository),

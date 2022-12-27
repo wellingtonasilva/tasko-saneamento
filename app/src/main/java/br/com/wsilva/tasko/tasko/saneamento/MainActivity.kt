@@ -30,20 +30,5 @@ class MainActivity : AppCompatActivity() {
                 Log.d("#### ", it.numeroOS.toString())
             }
         })
-
-        val navHostFragment =
-            supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
-        val navController = navHostFragment.navController
-        findViewById<BottomNavigationView>(R.id.nav_view)
-            .setupWithNavController(navController)
-//        val appBarConfiguration = AppBarConfiguration(
-//            setOf(
-//                R.id.ordemServicoListagemFragment, R.id.fotosListagemFragment, R.id.ocorrenciasListagemFragment
-//            )
-//        )
-
-//        findViewById<Button>(R.id.button).setOnClickListener {
-//            viewModel.getAllOrdemServico()
-//        }
     }
 }

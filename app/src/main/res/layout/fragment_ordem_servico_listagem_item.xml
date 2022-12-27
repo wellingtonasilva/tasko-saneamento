@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/shape_bordered_container"
+    style="@style/ShapeBorderedHomeItem"
     android:layout_margin="5dp"
     >
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/tvw_tipo_servico"
         style="@style/BasicTextViewTituloItemList"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -23,7 +23,7 @@
         />
 
     <TextView
-        android:id="@+id/textView51"
+        android:id="@+id/tvw_logradouro"
         style="@style/BasicTextView11sp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -33,10 +33,10 @@
         android:text="@string/app_tipo_servico"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintTop_toBottomOf="@+id/tvw_tipo_servico" />
 
     <TextView
-        android:id="@+id/textView512"
+        android:id="@+id/tvw_data_geracao"
         style="@style/BasicTextView11sp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -47,5 +47,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView51" />
+        app:layout_constraintTop_toBottomOf="@+id/tvw_logradouro" />
 </androidx.constraintlayout.widget.ConstraintLayout>
