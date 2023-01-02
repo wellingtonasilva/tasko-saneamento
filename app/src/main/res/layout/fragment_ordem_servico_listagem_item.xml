@@ -6,6 +6,7 @@
     android:layout_height="wrap_content"
     style="@style/ShapeBorderedHomeItem"
     android:layout_margin="5dp"
+    android:id="@+id/content"
     >
 
     <TextView

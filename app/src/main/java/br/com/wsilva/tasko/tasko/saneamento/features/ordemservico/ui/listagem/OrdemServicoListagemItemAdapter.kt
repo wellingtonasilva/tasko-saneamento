@@ -6,10 +6,14 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
+import br.com.wsilva.tasko.tasko.core.domain.model.home.HomeItem
 import br.com.wsilva.tasko.tasko.core.domain.model.os.OrdemServico
 import br.com.wsilva.tasko.tasko.saneamento.R
 
-class OrdemServicoListagemItemAdapter(private val list: List<OrdemServico>) : RecyclerView.Adapter<OrdemServicoListagemItemAdapter.ViewHolder>() {
+typealias onItemClick =  (ordemServico: OrdemServico) -> Unit
+
+class OrdemServicoListagemItemAdapter(private val list: List<OrdemServico>,
+                                      private val onItemClick: onItemClick) : RecyclerView.Adapter<OrdemServicoListagemItemAdapter.ViewHolder>() {
 
     class ViewHolder(internalView: View) : RecyclerView.ViewHolder(internalView) {
         val container = internalView.findViewById<ConstraintLayout>(R.id.content)
@@ -17,10 +21,13 @@ class OrdemServicoListagemItemAdapter(private val list: List<OrdemServico>) : Re
         val logradouro: TextView = internalView.findViewById(R.id.tvw_logradouro)
         val dataGeracao: TextView = internalView.findViewById(R.id.tvw_data_geracao)
 
-        fun bind(ordemServico: OrdemServico) {
+        fun bind(ordemServico: OrdemServico, onItemClick: onItemClick) {
             tipoServico.text = ordemServico.descricaoTipoServico
             logradouro.text = ordemServico.logradouro
             dataGeracao.text = ordemServico.dataGeracaoOS
+            container.setOnClickListener {
+                onItemClick(ordemServico)
+            }
         }
     }
 
@@ -31,7 +38,7 @@ class OrdemServicoListagemItemAdapter(private val list: List<OrdemServico>) : Re
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(list.get(position))
+        holder.bind(list.get(position), onItemClick)
     }
 
     override fun getItemCount(): Int {

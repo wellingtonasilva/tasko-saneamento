@@ -78,7 +78,11 @@
     <fragment
         android:id="@+id/ordemServicoListagemFragment"
         android:name="br.com.wsilva.tasko.tasko.saneamento.features.ordemservico.ui.listagem.OrdemServicoListagemFragment"
-        android:label="OrdemServicoListagemFragment" />
+        android:label="OrdemServicoListagemFragment" >
+        <action
+            android:id="@+id/action_ordemServicoListagemFragment_to_ordemServicoDetalheFragment"
+            app:destination="@id/ordemServicoDetalheFragment" />
+    </fragment>
     <fragment
         android:id="@+id/fotosListagemFragment"
         android:name="br.com.wsilva.tasko.tasko.saneamento.features.foto.ui.FotosListagemFragment"
@@ -91,4 +95,8 @@
         android:id="@+id/checklistListagemFragment"
         android:name="br.com.wsilva.tasko.tasko.saneamento.features.checklist.ui.ChecklistListagemFragment"
         android:label="ChecklistListagemFragment" />
+    <fragment
+        android:id="@+id/ordemServicoDetalheFragment"
+        android:name="br.com.wsilva.tasko.tasko.saneamento.features.ordemservico.ui.detalhe.OrdemServicoDetalheFragment"
+        android:label="OrdemServicoDetalheFragment" />
 </navigation>

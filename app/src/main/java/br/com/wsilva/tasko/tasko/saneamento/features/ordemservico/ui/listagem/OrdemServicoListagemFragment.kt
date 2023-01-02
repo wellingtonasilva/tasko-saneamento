@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import br.com.wsilva.tasko.tasko.saneamento.R
@@ -30,7 +31,9 @@ class OrdemServicoListagemFragment : Fragment() {
         recyclerView.layoutManager = LinearLayoutManager(recyclerView.context)
 
         viewModel.ordemServico.observe(viewLifecycleOwner, Observer {
-            recyclerView.adapter = OrdemServicoListagemItemAdapter(it)
+            recyclerView.adapter = OrdemServicoListagemItemAdapter(it) { ordemServico ->
+                findNavController().navigate(R.id.action_ordemServicoListagemFragment_to_ordemServicoDetalheFragment)
+            }
         })
 
         return view
