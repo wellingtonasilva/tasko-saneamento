@@ -1,4 +1,4 @@
-package br.com.wsilva.tasko.tasko.saneamento.features.ordemservico.ui
+package br.com.wsilva.tasko.tasko.saneamento.features.ordemservico.ui.listagem
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -40,38 +40,4 @@ class OrdemServicoListagemFragment : Fragment() {
         super.onResume()
         viewModel.getAllOrdemServico()
     }
-//
-//    private fun getList(): List<OrdemServico> {
-//        return listOf(
-//            OrdemServico(
-//                id = UUID.randomUUID().toString(),
-//                idOrdemServico = 1,
-//                agenteExterno = "Agente Externo",
-//                bairro = "Bairro",
-//                dataCancelamento = "17/12/1977",
-//                dataEncerramentoOS = "10/12/2022",
-//                numeroOS = 1010
-//            ),
-//
-//            OrdemServico(
-//                id = UUID.randomUUID().toString(),
-//                idOrdemServico = 1,
-//                agenteExterno = "Agente Externo",
-//                bairro = "Bairro",
-//                dataCancelamento = "17/12/1977",
-//                dataEncerramentoOS = "10/12/2022",
-//                numeroOS = 1010
-//            ),
-//
-//            OrdemServico(
-//                id = UUID.randomUUID().toString(),
-//                idOrdemServico = 1,
-//                agenteExterno = "Agente Externo",
-//                bairro = "Bairro",
-//                dataCancelamento = "17/12/1977",
-//                dataEncerramentoOS = "10/12/2022",
-//                numeroOS = 1010
-//            ),
-//        )
-//    }
 }

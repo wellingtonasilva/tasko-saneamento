@@ -1,4 +1,4 @@
-package br.com.wsilva.tasko.tasko.saneamento.features.ordemservico.ui
+package br.com.wsilva.tasko.tasko.saneamento.features.ordemservico.ui.listagem
 
 import android.view.LayoutInflater
 import android.view.View

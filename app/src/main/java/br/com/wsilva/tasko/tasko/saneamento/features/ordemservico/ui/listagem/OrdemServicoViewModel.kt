@@ -1,4 +1,4 @@
-package br.com.wsilva.tasko.tasko.saneamento.features.ordemservico.ui
+package br.com.wsilva.tasko.tasko.saneamento.features.ordemservico.ui.listagem
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -9,7 +9,7 @@ import br.com.wsilva.tasko.tasko.saneamento.features.ordemservico.data.usecase.O
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import java.util.UUID
+import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
 @HiltViewModel
@@ -21,24 +21,11 @@ class OrdemServicoViewModel @Inject constructor(
     val ordemServico: LiveData<List<OrdemServico>>
         get() = _ordemServico
 
-//    init {
-//        val ordemServico = OrdemServico(
-//            id = UUID.randomUUID().toString(),
-//            idOrdemServico = 1,
-//            agenteExterno = "Agente Externo",
-//            bairro = "Bairro",
-//            dataCancelamento = "17/12/1977",
-//            dataEncerramentoOS = "10/12/2022",
-//            numeroOS = 1010
-//        )
-//        viewModelScope.launch(Dispatchers.IO) {
-//            ordemServicoUseCases.addOrdemServicoUseCase(ordemServico)
-//        }
-//    }
-
     fun getAllOrdemServico() {
         viewModelScope.launch {
-            _ordemServico.postValue(ordemServicoUseCases.getAllOrdemServicoUseCase())
+            withContext(Dispatchers.IO) {
+                _ordemServico.postValue(ordemServicoUseCases.getAllOrdemServicoUseCase())
+            }
         }
     }
 }

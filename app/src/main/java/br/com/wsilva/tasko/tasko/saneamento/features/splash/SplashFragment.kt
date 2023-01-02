@@ -25,9 +25,9 @@ class SplashFragment : Fragment() {
         viewModel.authSession.observe(viewLifecycleOwner, Observer {
             if (it != null) {
                 if (it.isSignedIn) {
-                    //findNavController().navigate(R.id.action_splashFragment_to_homeFragment)
+                    findNavController().navigate(R.id.action_splashFragment_to_homeFragment)
                 } else {
-                    //findNavController().navigate(R.id.action_splashFragment_to_usuarioLoginFragment)
+                    findNavController().navigate(R.id.action_splashFragment_to_usuarioLoginFragment)
                 }
             }
         })

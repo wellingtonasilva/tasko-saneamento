@@ -77,7 +77,7 @@
     </fragment>
     <fragment
         android:id="@+id/ordemServicoListagemFragment"
-        android:name="br.com.wsilva.tasko.tasko.saneamento.features.ordemservico.ui.OrdemServicoListagemFragment"
+        android:name="br.com.wsilva.tasko.tasko.saneamento.features.ordemservico.ui.listagem.OrdemServicoListagemFragment"
         android:label="OrdemServicoListagemFragment" />
     <fragment
         android:id="@+id/fotosListagemFragment"
